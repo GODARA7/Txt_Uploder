@@ -41,7 +41,7 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["GURJAR"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file**")
+    editable = await m.reply_text(f"Hey\nSend txt file")
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
