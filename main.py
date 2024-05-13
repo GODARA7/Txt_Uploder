@@ -39,7 +39,8 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["GURJAR"]) & filters.user(ADMINS))
+
+@bot.on_message(filters.command(["GURJAR"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"Hey\nSend txt file")
     input: Message = await bot.listen(editable.chat.id)
