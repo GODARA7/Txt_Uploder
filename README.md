@@ -1,6 +1,6 @@
 # txt uploader
 
-# Made By Karan
+# Made By ALONE
 
 
 ## DEPLOY TO HEROKU
