@@ -23,7 +23,7 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6711709442:AAE1xJ6nNRwBPI83XpCKJCDIaf87p83f_f4",
+             bot_token= "6709810371:AAHiBTVARkUkJZTytDVI_FBLTGG2zmA57wQ",
              api_id= 21902174 ,
              api_hash= "214d79dbe2ddd7d9ea922d9a99af550a")
 
@@ -198,7 +198,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by MASOOM**")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by @MASOOMGURJARTG**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
