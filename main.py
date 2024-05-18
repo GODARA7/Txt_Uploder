@@ -23,7 +23,7 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "7090383063:AAH234aABj4XgCn0EudOGVcoGmdPoUAGNjw",
+             bot_token= "7198583942:AAGYLBY0_LSxUeaCPY7l8nqzn1O1h549kv0",
              api_id= 21902174 ,
              api_hash= "214d79dbe2ddd7d9ea922d9a99af550a")
 
@@ -46,7 +46,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1002092747701, x)
+        await bot.send_document(-1002114776788, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = "GURJAR"
@@ -170,13 +170,13 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) MASOOM.mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} MASOOM.pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) [MASOOM].mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1} [MASOOM].pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = -1002092747701)
+                        await copy.copy(chat_id = -1002114776788)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -190,7 +190,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id,document=f'{name}.pdf', caption=cc1)
-                        await copy.copy(chat_id = -1002092747701)
+                        await copy.copy(chat_id = -1002114776788)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
