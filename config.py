@@ -4,12 +4,12 @@ API_ID = API_ID = 25434657
 
 API_HASH = os.environ.get("API_HASH", "22cfc54f94cf17360dc1475a51e38518")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7233700399:AAGJ53ONFdfn6jybap3icZTwdc3eYwXUChA")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "6601041786:AAHurA5y2EiD0p6csNNX1OAJbxTDs5rcD6M")
 PASS_DB = int(os.environ.get("PASS_DB", "721"))
 
 OWNER = int(os.environ.get("OWNER", 6950434272))
 
-LOG = -1002240073624
+LOG = -1002205829205
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "6950434272").split()):
