@@ -23,9 +23,9 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "7230590152:AAGSMFoUcJb7O3jK0Mw6xE7eCYaSMaiHeWg",
-             api_id= 21187489 ,
-             api_hash= "e703688b33a9758c589c21bd5ed3d674")
+             bot_token= "7386793906:AAEAUkRNz0cS4q1S77-KZ_UCwWOjyJvKN-Y",
+             api_id= 26910519 ,
+             api_hash= "0b14672454a94495a50c9381ba107e30")
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
@@ -46,7 +46,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1002013795533, x)
+        await bot.send_document(-1002147658922, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = "GURJAR"
@@ -176,7 +176,7 @@ async def account_login(bot: Client, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = -1002013795533)
+                        await copy.copy(chat_id = -1002147658922)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -190,7 +190,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id,document=f'{name}.pdf', caption=cc1)
-                        await copy.copy(chat_id = -1002013795533)
+                        await copy.copy(chat_id = -1002147658922)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
