@@ -170,8 +170,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) [MASOOM🇮🇳].mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} [MASOOM🇮🇳].pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) [FRIEND].mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1} [FRIEND].pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -198,7 +198,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n **bot made by @MASOOMGURJARTG**")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n **bot made by FRIEND**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
