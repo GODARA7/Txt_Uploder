@@ -23,14 +23,14 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "__",
-             api_id= _ ,
-             api_hash= "__")
+             bot_token= "7527344410:AAFWR5lW9V2fFJUK9-jB9v8ZLdjWv1CQIpc",
+             api_id=  28466214,
+             api_hash= "3f55d44aae0f6c72f0dd8855adeeb60f")
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /GURJAR")
+    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /TXT")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -40,16 +40,16 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["GURJAR"]))
+@bot.on_message(filters.command(["TXT"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"Hey\nSend txt file")
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1002185632298, x)
+        await bot.send_document(-1002163579695, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
-        credit = "GURJAR"
+        credit = "MEDARN"
 
 
         path = f"./downloads/{m.chat.id}"
@@ -170,8 +170,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) [FRIEND].mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} [FRIEND].pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1} ({res}) [𝐌𝐄𝐋𝐕𝐈𝐍].mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1} [𝐌𝐄𝐋𝐕𝐈𝐍].pdf \n**Batch Name :**{b_name}\n\n**Downloaded by : {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -198,7 +198,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n **bot made by FRIEND**")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n **bot made by 𝐌𝐄𝐋𝐕𝐈𝐍🧑‍💻**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
