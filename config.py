@@ -9,7 +9,7 @@ PASS_DB = int(os.environ.get("PASS_DB", "721"))
 
 OWNER = int(os.environ.get("OWNER", 7242349417))
 
-LOG = -1002163579695
+LOG = -1002193859143
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "7242349417").split()):
